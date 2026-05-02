@@ -1287,6 +1287,57 @@ a.link {
 
 a.link:hover { text-decoration-color: var(--accent); }
 
+/* === HERO PORTRAIT === */
+.hero__layout {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: var(--space-16);
+  align-items: center;
+}
+
+.hero__portrait {
+  flex-shrink: 0;
+}
+
+.hero__portrait img {
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 15%;
+  border: 3px solid rgba(255,255,255,0.12);
+  display: block;
+  box-shadow: 0 0 0 8px rgba(224,86,55,0.15);
+}
+
+@media (max-width: 860px) {
+  .hero__layout {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+
+  .hero__portrait {
+    order: -1;
+  }
+
+  .hero__portrait img {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+/* === ABOUT PAGE PHOTO === */
+.about-photo {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: center 15%;
+  border-radius: var(--radius-lg);
+  display: block;
+  margin-bottom: var(--space-4);
+  border: 1px solid var(--border);
+}
+
 /* Print-friendly resume */
 @media print {
   .nav, .page-hero, .contact-cta, .footer, .resume-actions { display: none; }
