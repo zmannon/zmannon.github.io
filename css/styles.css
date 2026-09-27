@@ -335,8 +335,11 @@ section { padding: var(--space-24) 0; }
   line-height: 1.4;
 }
 
+.proof-bar__grid--three { grid-template-columns: repeat(3, 1fr); }
+
 @media (max-width: 640px) {
   .proof-bar__grid { grid-template-columns: repeat(2, 1fr); }
+  .proof-bar__grid--three { grid-template-columns: repeat(3, 1fr); }
 }
 
 /* === SECTION HEADER === */
