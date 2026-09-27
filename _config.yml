@@ -1,0 +1,12 @@
+# GitHub Pages builds this site with Jekyll. Pages with front matter use
+# _layouts/default.html, which pulls the shared nav and footer from _includes/.
+title: Zach Mannon
+url: https://zachmannon.com
+
+# Never publish these, even if they are committed by mistake.
+exclude:
+  - README.md
+  - CLAUDE.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor

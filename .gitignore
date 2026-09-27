@@ -1,0 +1,5 @@
+# Local-only files. Never publish these.
+.claude/
+CLAUDE.md
+_site/
+.jekyll-cache/

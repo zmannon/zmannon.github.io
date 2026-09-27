@@ -22,37 +22,6 @@
     });
   }
 
-  // === Active nav link ===
-  const currentPath = window.location.pathname.replace(/\/$/, '') || '/index.html';
-  const currentFile = currentPath.split('/').pop() || 'index.html';
-
-  document.querySelectorAll('.nav__link').forEach(function (link) {
-    const href = (link.getAttribute('href') || '').replace(/\/$/, '');
-    const hrefFile = href.split('/').pop() || 'index.html';
-    if (
-      hrefFile === currentFile ||
-      (currentFile === '' && hrefFile === 'index.html')
-    ) {
-      link.classList.add('active');
-    }
-  });
-
-  // === FAQ accordion ===
-  const faqItems = document.querySelectorAll('.faq-item');
-
-  faqItems.forEach(function (item) {
-    const question = item.querySelector('.faq-item__question');
-    if (!question) return;
-
-    question.addEventListener('click', function () {
-      const isOpen = item.classList.contains('open');
-      // Close all
-      faqItems.forEach(function (i) { i.classList.remove('open'); });
-      // Toggle this one
-      if (!isOpen) { item.classList.add('open'); }
-    });
-  });
-
   // === Smooth scroll for anchor links ===
   document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
     anchor.addEventListener('click', function (e) {
